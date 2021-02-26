@@ -12,6 +12,13 @@ button {
     background-image: linear-gradient(35deg, #CCFFFF, #FFCCCC)
 }
 
+button:active { 
+    transform: scale(0.96); 
+    /* Scaling button to 0.98 to its original size */ 
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+    /* Lowering the shadow */ 
+}
+
 #title {
     color: #33FF00;
     margin:auto;
@@ -36,5 +43,33 @@ button {
     margin-top: 20px;
     background-image: linear-gradient(35deg, #25062e, #1466c479);
     border: 1px black solid;
+    color: #33FF00;
 
+}
+
+#resultsList {
+margin: 5px 25px;
+height: 225px;
+border: black 2px solid;
+
+}
+#scoreboard {
+    height: 40px;
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    font-size: 24px;
+    
+    text-shadow: 0 0 5px black;
+    
+}
+
+#player {
+    width: 20%;
+    margin:10px;
+    
+}
+#computer {
+    width: 25%;
+    margin:10px;
 }

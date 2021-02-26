@@ -1,6 +1,11 @@
 let playerWins = 0
 let computerWins = 0
 const computerChoices = ["rock", "paper", "scissors"]
+const result = document.createElement('li')
+const results = document.getElementById('resultsList')
+const player = document.getElementById('player')
+const computer = document.getElementById('computer')
+
 function computerChooser () {
     computerChoice = Math.floor(Math.random() * 3)
     return computerChoice
@@ -90,6 +95,9 @@ buttons.forEach((button) => {
 
 
 function checkWinner(){
+    player.textContent = "Player: " + (playerWins)
+    computer.textContent = "Computer: " + (computerWins)
+
 if (playerWins > 4){
     playerWins = 0
     computerWins = 0
