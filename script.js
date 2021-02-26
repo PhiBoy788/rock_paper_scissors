@@ -95,16 +95,20 @@ buttons.forEach((button) => {
 
 
 function checkWinner(){
-    player.textContent = "Player: " + (playerWins)
-    computer.textContent = "Computer: " + (computerWins)
+    player.textContent = "Player :  " + (playerWins)
+    computer.textContent = "Computer :  " + (computerWins)
 
 if (playerWins > 4){
     playerWins = 0
     computerWins = 0
+    player.textContent = "Player :  " + (playerWins)
+    computer.textContent = "Computer :  " + (computerWins)
     console.log("YOU WIN")
 }else if (computerWins > 4){
     playerWins = 0
     computerWins = 0
+    player.textContent = "Player :  " + (playerWins)
+    computer.textContent = "Computer :  " + (computerWins)
     console.log("YOU LOSE")
     
 }else{
