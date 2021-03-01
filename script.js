@@ -113,7 +113,7 @@ if (playerWins > 4){
     computerWins = 0
     player.textContent = "Player :  " + (playerWins)
     computer.textContent = "Computer :  " + (computerWins)
-    console.log("YOU WIN")
+    alert("YOU WIN")
     removeAllChildNodes(playerList)
     removeAllChildNodes(computerList)
 }else if (computerWins > 4){
@@ -121,7 +121,7 @@ if (playerWins > 4){
     computerWins = 0
     player.textContent = "Player :  " + (playerWins)
     computer.textContent = "Computer :  " + (computerWins)
-    console.log("YOU LOSE")
+    alert("YOU LOSE")
     removeAllChildNodes(playerList)
     removeAllChildNodes(computerList)
     
