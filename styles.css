@@ -48,10 +48,28 @@ button:active {
 }
 
 #resultsList {
-margin: 5px 25px;
-height: 225px;
-border: black 2px solid;
+    display: flex;
+    margin: 5px 25px;
+    height: 225px;
+    border: black 2px solid;
+}
 
+#playerList {
+border-right: black 2px solid;
+width: 45%;
+height: 225px;
+margin: -2px;
+margin-right: 0px;
+overflow-y:auto;
+flex-direction: row-reverse;
+}
+
+#computerList {
+    margin: -2px;
+    margin-left: 0px;
+    height: 225px;
+    width: 45%;
+    overflow-y:auto;
 }
 #scoreboard {
     height: 40px;
@@ -59,9 +77,7 @@ border: black 2px solid;
     display:flex;
     justify-content: space-around;
     font-size: 24px;
-    
     text-shadow: 0 0 5px black;
-    
 }
 
 #player {

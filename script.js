@@ -5,6 +5,9 @@ const result = document.createElement('li')
 const results = document.getElementById('resultsList')
 const player = document.getElementById('player')
 const computer = document.getElementById('computer')
+const playerList = document.getElementById('playerList')
+const computerList = document.getElementById('computerList')
+const li = document.createElement('li')
 
 function computerChooser () {
     computerChoice = Math.floor(Math.random() * 3)
@@ -17,6 +20,13 @@ function getPlayerSelection(playerInput) {
 
 function playRound (playerSelection) {
     computerSelection = computerChoices[computerChooser()]
+    playerMove = li
+    playerMove.textContent = playerSelection
+    playerList.insertBefore(playerMove.cloneNode(true),playerList.firstChild)
+    computerMove = li
+    computerMove.textContent = computerSelection
+    computerList.insertBefore(computerMove.cloneNode(true),computerList.firstChild)
+    
     console.log("Computer Selection")
     console.log(computerSelection)
     console.log("Player Selection")
@@ -104,14 +114,24 @@ if (playerWins > 4){
     player.textContent = "Player :  " + (playerWins)
     computer.textContent = "Computer :  " + (computerWins)
     console.log("YOU WIN")
+    removeAllChildNodes(playerList)
+    removeAllChildNodes(computerList)
 }else if (computerWins > 4){
     playerWins = 0
     computerWins = 0
     player.textContent = "Player :  " + (playerWins)
     computer.textContent = "Computer :  " + (computerWins)
     console.log("YOU LOSE")
+    removeAllChildNodes(playerList)
+    removeAllChildNodes(computerList)
     
 }else{
     return false
 }
+}
+
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
 }
